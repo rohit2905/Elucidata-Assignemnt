@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Elucidata Assignment</title>
+    <style>
+        #fs {
+            border-color: black;
+            border-style: double;
+            border-width: 7px;
+            margin: 120px;
+            padding: 80px;
+            width: 400px;
+        }
+    </style>
+</head>
+
+<body bgcolor="#ba83d4">
+    <center>
+        <fieldset align="center" id="fs">
+            <legend><b>Elucidata Assignment</b></legend>
+            <form action="" method="post" enctype="multipart/form-data" style="margin: 0 auto">
+                <table>
+                    {{form.as_table}}
+                </table>
+                <br>
+                <hr> {% csrf_token %}
+                <p>Please click Download to download the Zip file of output.</p>
+                <input type="submit" value="Download">
+            </form>
+        </fieldset>
+    </center>
+</body>
+
+</html>
